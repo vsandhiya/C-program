@@ -1,0 +1,19 @@
+#include<stdio.h>
+   int main(){
+         int array1[30];
+         int i, j, n1, n2;
+         printf("Enter no of elements to array :");
+         scanf("%d", &n1);
+         printf("Enter the Array elements");
+         for (i = 1; i<=n1; i++) {
+         scanf("%d", &array1[i]);
+         }
+         printf("Enter the element to be searched :");
+         scanf("%d", &n2);
+         for (i = 1; i<=n1; i++)
+         if(array1[i]==n2){
+         j=i;
+         }
+         printf(" The Location of the searched element %d in the Array is %d", n2, j);
+    return(0);
+    }
