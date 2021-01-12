@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#define str_size 100
+
+void main()
+{
+    char str[str_size];
+    int alp, digit, spl, i;
+    alp = digit = spl = i = 0;
+
+
+       fgets(str, sizeof str, stdin);	
+
+
+    while(str[i]!='\0')
+    {
+        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        {
+            alp++;
+        }
+        else if(str[i]>='0' && str[i]<='9')
+        {
+            digit++;
+        }
+        else
+        {
+            spl++;
+        }
+        
+      i++;
+    }
+
+    printf("Alphabets in the string is : %d\n", alp);
+    printf("Digits in the string is : %d\n", digit);
+    printf("Special characters in the string is : %d\n\n", spl);
+}
